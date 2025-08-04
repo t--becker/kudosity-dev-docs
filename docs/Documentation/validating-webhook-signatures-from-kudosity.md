@@ -57,7 +57,7 @@ echo "Generated Hash: {$hash}\n";
 ?>
 ```
 
-Note:  
+Note:\
 When generating the hash, ensure that parameters are in the exact order they appear in the callback. Any deviation in parameter order will result in a different hash.
 
 Additionally, if using tools like Webhook.site, be aware that such tools may reorder parameters before displaying results, which can cause discrepancies in the generated hash.
@@ -74,41 +74,11 @@ Additionally, if using tools like Webhook.site, be aware that such tools may reo
 
 Example Send
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/365d90a4ceb7c41bc97539f7781b7dfba65b4c0a1d64ea88c9e1c59f84023ab9-Screenshot_2024-11-12_at_4.11.10_pm.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/365d90a4ceb7c41bc97539f7781b7dfba65b4c0a1d64ea88c9e1c59f84023ab9-Screenshot_2024-11-12_at_4.11.10_pm.png" />
 
 Captured DLR callback on Webhook.site
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/949842c9c5b80fe03eaa41bc1334fdb507d6548bdd26e87f0bea080e9d787c3a-Screenshot_2024-11-12_at_4.12.31_pm.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/949842c9c5b80fe03eaa41bc1334fdb507d6548bdd26e87f0bea080e9d787c3a-Screenshot_2024-11-12_at_4.12.31_pm.png" />
 
 Sample Output
 

@@ -16,22 +16,7 @@ This guide walks you through the process of setting up WhatsApp Business messagi
 
 ## WhatsApp Business Onboarding Process
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f7e8a26a883d09e8ca687c421b0e4c1296d3b1f9066b46bf978901d524358aa3-ChatGPT_Image_Jun_20_2025_02_09_12_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "400px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="400px" src="https://files.readme.io/f7e8a26a883d09e8ca687c421b0e4c1296d3b1f9066b46bf978901d524358aa3-ChatGPT_Image_Jun_20_2025_02_09_12_PM.png" />
 
 **Process Overview:**
 

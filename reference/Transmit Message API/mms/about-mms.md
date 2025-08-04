@@ -42,11 +42,11 @@ Our MMS connections support a vast variety of file types. However, be aware that
 
 Telcos have limited support for file sizes. Currently, we support:
 
-- 400 KB per file
+* 400 KB per file
 
 # File Dimension Support
 
 As you're likely sending on mobile devices, we recommend smaller dimensions for greater visibility on mobile devices:
 
-- 480px by 480px
-- 640px by 640px
+* 480px by 480px
+* 640px by 640px

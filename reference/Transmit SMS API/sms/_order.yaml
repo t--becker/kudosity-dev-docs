@@ -1,3 +1,4 @@
 - post_send-sms-json
 - post_cancel-sms-json
 - post_format-number-json
+- post_get-sms-responses-json

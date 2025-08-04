@@ -7,3 +7,4 @@
 - put_v1-touchpoint-id-start
 - put_v1-touchpoint-id-cancel
 - get_v1-touchpoint-id-report-contacts
+- get_v1-touchpoint-id-aggregates

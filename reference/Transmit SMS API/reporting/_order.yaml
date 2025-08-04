@@ -4,3 +4,4 @@
 - post_get-user-sms-sent-json
 - get_get-contact-sms-stats-json
 - post_get-sms-stats-json
+- post_get-sms-sent-json

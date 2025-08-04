@@ -18,37 +18,23 @@ We use [Glitch.com](https://glitch.com/@kudosity) to show how to integrate with 
 
 This tutorial covers
 
-- Sending an SMS through api.transmitsms.com
-- Setting up a webhook in Kudosity
-- Receiving the SMS webhook and displaying it on the page
+* Sending an SMS through api.transmitsms.com
+* Setting up a webhook in Kudosity
+* Receiving the SMS webhook and displaying it on the page
 
 ## Setup
 
-1. **Sign up**: Register for a free Kudosity developer account: [Kudosity Developer Account](https://kudosity.com/developer-trial?utm_source=website&utm_medium=banner&utm_campaign=developer-portal) 
+1. **Sign up**: Register for a free Kudosity developer account: [Kudosity Developer Account](https://kudosity.com/developer-trial?utm_source=website\&utm_medium=banner\&utm_campaign=developer-portal) 
 2. **Remix Project**: Remix the Glitch project [sms-kudosity-webhook-example](https://glitch.com/~sms-kudosity-webhook-example).
 3. **Configure Webhooks**: Set the **DLR Callback URL** in your Kudosity account to: `yourproject.glitch.me/message`
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4d6c96205297a6f9d8abc3c7b2ac0b8780224666c42bf40916c1bf0457280417-Screenshot_2024-11-07_at_5.18.59_pm.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/4d6c96205297a6f9d8abc3c7b2ac0b8780224666c42bf40916c1bf0457280417-Screenshot_2024-11-07_at_5.18.59_pm.png" />
 
 4. Run the project:
 
    1. Fill in the form details and click send
    2. TO: Only numbers in your “**My Test List**” can be used. Read more about [Kudosity Trial Limitations](https://kudosity.transmitsms.com/u/trial-limitations).
-   3. API_KEY + API Secret: <https://kudosity.transmitsms.com/u/settings/api>
+   3. API\_KEY + API Secret: [https://kudosity.transmitsms.com/u/settings/api](https://kudosity.transmitsms.com/u/settings/api)
 
 ### Workflow Overview
 
@@ -60,22 +46,7 @@ Once you send the SMS:
 4. Kudosity forwards the status as a webhook to your project:`yourproject.glitch.me/message`
 5. The project displays the webhook on the page.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/6fe483efd6d0c8f31bbf36f29638177b71ae668a8a24da2d20f37515b61690bc-Screenshot_2024-11-12_at_10.46.18_am.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
-
+<Image align="center" className="border" border={true} src="https://files.readme.io/6fe483efd6d0c8f31bbf36f29638177b71ae668a8a24da2d20f37515b61690bc-Screenshot_2024-11-12_at_10.46.18_am.png" />
 
 <br />
 
@@ -85,12 +56,12 @@ Below are salient points about the code. Keep in mind this is just sample code f
 
 ### Sending SMS
 
-**Endpoint**: `/sendmessage`  
+**Endpoint**: `/sendmessage`\
 This POST route processes form data and sends a request to the TransmitSMS API.
 
-- **Authorization**: Credentials (API_KEY and SECRET) are base64-encoded for Basic Authentication.
-- **Request Preparation**: Form data is appended using `URLSearchParams`.
-- **Request Method**: The `fetch` method sends a POST request to the api.
+* **Authorization**: Credentials (API\_KEY and SECRET) are base64-encoded for Basic Authentication.
+* **Request Preparation**: Form data is appended using `URLSearchParams`.
+* **Request Method**: The `fetch` method sends a POST request to the api.
 
 ```Text JavaScript
 app.post('/sendmessage', async (req, res) => {
@@ -133,8 +104,8 @@ app.post('/sendmessage', async (req, res) => {
 
 ### Webhook Integration
 
-**Endpoint:** `/message`  
-The webhook endpoint receives GET requests from TransmitSMS. Key parameters such as message_id, mobile, datetime, status, user_id, and rate are extracted and stored in a global message object.
+**Endpoint:** `/message`\
+The webhook endpoint receives GET requests from TransmitSMS. Key parameters such as message\_id, mobile, datetime, status, user\_id, and rate are extracted and stored in a global message object.
 
 ```Text JavaScript
 app.get("/message", function (request, response) {
@@ -149,6 +120,6 @@ app.get("/message", function (request, response) {
 });
 ```
 
-Integration Notes  
-Webhook Registration: Configure the callback URL (/message) in your TransmitSMS API Settings.  
+Integration Notes\
+Webhook Registration: Configure the callback URL (/message) in your TransmitSMS API Settings.\
 Security: Add signature verification to validate the webhook's authenticity. Learn more: [Validating Webhook Signatures from Kudosity](validating-webhook-signatures-from-kudosity).

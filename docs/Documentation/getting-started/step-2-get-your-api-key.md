@@ -20,17 +20,4 @@ To get your API key and set your API secrete:
 4. Copy API key and update your API secret.
 5. Click Update Profile to save your changes.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/2697c6f-api_settings.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
+<Image align="center" src="https://files.readme.io/2697c6f-api_settings.png" />

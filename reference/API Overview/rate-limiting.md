@@ -14,6 +14,6 @@ To provide the best service to all our customers we limit the number of API call
 
 If you exceed this limit we will return two indicators which you can use in your code to detect that you have been throttled.
 
-The first is the HTTP status code 429 "Too Many Requests", the second is the error code "OVER_LIMIT" in the error block of the response body.
+The first is the HTTP status code 429 "Too Many Requests", the second is the error code "OVER\_LIMIT" in the error block of the response body.
 
 If this happens message requests will be dropped, they will not be retried.

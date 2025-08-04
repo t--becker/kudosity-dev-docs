@@ -22,7 +22,7 @@ The Authorization token is a Base64 encoded string, combining your `API_KEY` + "
 
 ### Mac Terminal
 
-- `echo -n "API_KEY:API_Secret" | base64`
+* `echo -n "API_KEY:API_Secret" | base64`
 
 ### Windows PowerShell
 
@@ -38,8 +38,8 @@ echo $base64String
 
 Update the code with your encoded authentication token and the number you are trying to send to:
 
-- `Authorization:` Basic **XXXXXXXX**
-- `To` - **XXXXXXX** - Kudosity trial accounts can only send messages to the number registered for their account. 
+* `Authorization:` Basic **XXXXXXXX**
+* `To` - **XXXXXXX** - Kudosity trial accounts can only send messages to the number registered for their account. 
 
 **Mac Terminal**
 

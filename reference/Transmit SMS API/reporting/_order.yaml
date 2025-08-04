@@ -7,3 +7,4 @@
 - post_get-sms-sent-json
 - post_get-message-report-json
 - post_get-list-json
+- get_get-lists-json

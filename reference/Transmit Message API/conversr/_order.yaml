@@ -3,3 +3,4 @@
 - delete_v1-touchpoint-id
 - get_v1-touchpoint
 - post_v1-touchpoint
+- get_v1-touchpoint-type-names

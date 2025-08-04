@@ -14,21 +14,7 @@ All API requests require API credentials, which you can find in your account SET
 
 Your API Secret can be anything you like. Think of the API Secret as a password field where you will need to enter an alphanumeric of your choice. Once you enter your chosen API Secret, click on the UPDATE PROFILE button to save your settings
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/30c1420-FyMeLX68fF7Q_fjtbi1.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/30c1420-FyMeLX68fF7Q_fjtbi1.png" />
 
 ## API Authentication
 
@@ -38,8 +24,8 @@ Our APIs support different authentication methods.
 
 The api.transmitsms.com endpoints use **Basic Authentication** for authentication.
 
-- Basic Authentication is a simple authentication scheme built into the HTTP protocol.
-- The client sends the API Key and API Secret encoded as a Base64 string in the Authorization header.
+* Basic Authentication is a simple authentication scheme built into the HTTP protocol.
+* The client sends the API Key and API Secret encoded as a Base64 string in the Authorization header.
 
 Example
 
@@ -55,8 +41,8 @@ curl --location 'https://api.transmitsms.com/send-sms.json' \
 
 Transmit Message endpoints use [API Key Authentication](https://en.wikipedia.org/wiki/API_key).
 
-- API Key Authentication involves sending a unique key in the request header to authenticate the client.
-- The API key acts as a token that allows access to the API, identifying the client making the request.
+* API Key Authentication involves sending a unique key in the request header to authenticate the client.
+* The API key acts as a token that allows access to the API, identifying the client making the request.
 
 Example
 

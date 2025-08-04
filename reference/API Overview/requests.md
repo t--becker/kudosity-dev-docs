@@ -14,7 +14,7 @@ The Transmit SMS API (**api.transmitsms.com**) supports both JSON and XML. But t
 
 For **api.transmitsms.com**, you can choose which response you want by selecting the appropriate suffix (.json OR .xml) in your request. You can find both JSON and XML in code examples for each endpoint in the api.transmitsms.com API documentation.
 
-**XML Example **
+**XML Example**
 
 Request
 

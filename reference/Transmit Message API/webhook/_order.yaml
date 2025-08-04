@@ -3,3 +3,4 @@
 - get_v2-webhook
 - get_v2-webhook-id
 - put_v2-webhook-id
+- delete_v2-webhook-id

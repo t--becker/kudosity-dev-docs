@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-Kudosity’s Webhooks API enables you to subscribe to key messaging events in real time. To receive events, you must configure a publicly accessible HTTPS endpoint that can accept POST requests. Each event includes an event_type field to indicate the kind of event, and some events (e.g., status-related ones) also include a status object with more detailed delivery information.
+Kudosity’s Webhooks API enables you to subscribe to key messaging events in real time. To receive events, you must configure a publicly accessible HTTPS endpoint that can accept POST requests. Each event includes an event\_type field to indicate the kind of event, and some events (e.g., status-related ones) also include a status object with more detailed delivery information.
 
 ## Supported `event_type` Values
 
@@ -52,24 +52,24 @@ The `event_type` field is **deprecated** and will be removed in a future version
 
 ## Status Events
 
-For all status-related events (MMS_STATUS, SMS_STATUS, RCS_STATUS), the payload includes a status object that contains metadata about the message and its delivery state.
+For all status-related events (MMS\_STATUS, SMS\_STATUS, RCS\_STATUS), the payload includes a status object that contains metadata about the message and its delivery state.
 
 ### Common Status Values
 
 These values apply to both SMS and MMS messages:
 
-- `SENT`: Message has been submitted to the carrier.
-- `DELIVERED`: Message has been delivered to the recipient's handset.
-- `FAILED`: Message failed due to an error from the carrier or device.
-- `ACCEPTED`: Message was accepted by the carrier; delivery may have been attempted.
-- `SOFT_BOUNCE`: Message was undeliverable due to a temporary issue (e.g., handset off or out of range).
-- `HARD_BOUNCE`: Message failed due to a permanent issue (e.g., number disconnected).
-- `REJECTED`: Message was rejected by Kudosity (e.g., due to compliance validation).
-- `OTHER`: A status that does not match any known enum; provided as-is from the carrier.
+* `SENT`: Message has been submitted to the carrier.
+* `DELIVERED`: Message has been delivered to the recipient's handset.
+* `FAILED`: Message failed due to an error from the carrier or device.
+* `ACCEPTED`: Message was accepted by the carrier; delivery may have been attempted.
+* `SOFT_BOUNCE`: Message was undeliverable due to a temporary issue (e.g., handset off or out of range).
+* `HARD_BOUNCE`: Message failed due to a permanent issue (e.g., number disconnected).
+* `REJECTED`: Message was rejected by Kudosity (e.g., due to compliance validation).
+* `OTHER`: A status that does not match any known enum; provided as-is from the carrier.
 
 ### RCS Status Events
 
-The RCS_STATUS event is triggered when the status of an RCS message changes. These updates are sent as a webhook with a status object that includes delivery metadata and a status field indicating the message’s current state.
+The RCS\_STATUS event is triggered when the status of an RCS message changes. These updates are sent as a webhook with a status object that includes delivery metadata and a status field indicating the message’s current state.
 
 **Supported RCS Status Values**
 
@@ -117,20 +117,20 @@ Filter by sender, status, message reference, and campaign:
 
 ### Filter Logic
 
-- **Within each filter array**: OR logic (matches any value)
-- **Between different filters**: AND logic (must match all conditions)
+* **Within each filter array**: OR logic (matches any value)
+* **Between different filters**: AND logic (must match all conditions)
 
 ### Available Filter Fields
 
-- **`event_type`**: Array of event types to subscribe to (replaces the deprecated single `event_type` field)
-- **`sender`**: Array of sender addresses to filter by
-- **`message_ref`**: Array of message references to filter by
-- **`status`**: Array of message statuses to filter by (applies to status events only)
-- **`campaign_id`**: Array of campaign IDs to filter by 
+* **`event_type`**: Array of event types to subscribe to (replaces the deprecated single `event_type` field)
+* **`sender`**: Array of sender addresses to filter by
+* **`message_ref`**: Array of message references to filter by
+* **`status`**: Array of message statuses to filter by (applies to status events only)
+* **`campaign_id`**: Array of campaign IDs to filter by 
 
 ## Link Hit
 
-The LINK_HIT event is triggered any time a recipient visits a link that is tracked. Track Links is an optional flag on the send message API calls. Along with the URL that was being tracked is a hits field indicating how many visits this tracked link has in total and a source_message which contains the track link sent to the recipient.
+The LINK\_HIT event is triggered any time a recipient visits a link that is tracked. Track Links is an optional flag on the send message API calls. Along with the URL that was being tracked is a hits field indicating how many visits this tracked link has in total and a source\_message which contains the track link sent to the recipient.
 
 Example Payloads
 
@@ -186,9 +186,9 @@ Example Payloads
 
 ## Opt Out
 
-The OPT_OUT event is triggered when a recipient has visited an opt-out link in a message they have received or by sending a message with the text "STOP".
+The OPT\_OUT event is triggered when a recipient has visited an opt-out link in a message they have received or by sending a message with the text "STOP".
 
-Using parameter [opt-out-link] in message body, inserts the opt-out link.
+Using parameter \[opt-out-link] in message body, inserts the opt-out link.
 
 The source field will be set according to the method a recipient has used to opt-out and contain a value of either link or SMS.
 
@@ -236,7 +236,7 @@ Example Payloads
 
 ## MMS Inbound
 
-The MMS_INBOUND event is posted to you on receipt of an MMS sent from a recipient to one of the senders listed on your account. For convenience we will try and find a message that you have sent to this recipient from that sender in the past `72 hours` and supply it as the last_message field. This is useful for determining if an inbound message is potentially a reply.
+The MMS\_INBOUND event is posted to you on receipt of an MMS sent from a recipient to one of the senders listed on your account. For convenience we will try and find a message that you have sent to this recipient from that sender in the past `72 hours` and supply it as the last\_message field. This is useful for determining if an inbound message is potentially a reply.
 
 ```json JSON
 {
@@ -270,7 +270,7 @@ The MMS_INBOUND event is posted to you on receipt of an MMS sent from a recipien
 
 ## MMS Status
 
-The MMS_STATUS event data is posted to you for changes to an MMS message status. These are currently only comprised of internal statuses (SENT, FAILED).
+The MMS\_STATUS event data is posted to you for changes to an MMS message status. These are currently only comprised of internal statuses (SENT, FAILED).
 
 ```json JSON
 {
@@ -291,7 +291,7 @@ The MMS_STATUS event data is posted to you for changes to an MMS message status.
 
 ## SMS Inbound
 
-The SMS_INBOUND event is posted to you on receipt of an SMS sent from a recipient to one of the senders listed on your account. For convenience we will try and find a message that you have sent to this recipient from that sender and supply it as the last_message field. This is useful for determining if an inbound message is potentially a reply. The routed_via field will display when a shared local number has been used to deliver your message.
+The SMS\_INBOUND event is posted to you on receipt of an SMS sent from a recipient to one of the senders listed on your account. For convenience we will try and find a message that you have sent to this recipient from that sender and supply it as the last\_message field. This is useful for determining if an inbound message is potentially a reply. The routed\_via field will display when a shared local number has been used to deliver your message.
 
 ```json JSON
 {
@@ -322,9 +322,9 @@ The SMS_INBOUND event is posted to you on receipt of an SMS sent from a recipien
 
 ## SMS Status
 
-The SMS_STATUS event data is posted to you for changes to a SMS message status. Multiple status events can be triggered for a single message. The routed_via field will display when a shared local number has been used to deliver your message.
+The SMS\_STATUS event data is posted to you for changes to a SMS message status. Multiple status events can be triggered for a single message. The routed\_via field will display when a shared local number has been used to deliver your message.
 
-**SMS_Status: SENT**
+**SMS\_Status: SENT**
 
 ```json JSON
 {
@@ -344,7 +344,7 @@ The SMS_STATUS event data is posted to you for changes to a SMS message status. 
 }
 ```
 
-**SMS_Status: DELIVERED**
+**SMS\_Status: DELIVERED**
 
 ```json JSON
 {

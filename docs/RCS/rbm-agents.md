@@ -29,10 +29,10 @@ An Agent is the branded identity your customers interact with. It’s the verifi
 
 Agents include:
 
-- Your brand name
-- Your logo and color scheme
-- Verified Google badge
-- Optional contact info (call, email, web)
+* Your brand name
+* Your logo and color scheme
+* Verified Google badge
+* Optional contact info (call, email, web)
 
 🧠 Customers see your agent name, not your phone number. Messages appear to come from your business — not a random shortcode or longcode.
 
@@ -42,28 +42,14 @@ With SMS, the sender is the number (short code or long code) that a message is s
 
 Some important details about senders and agents:
 
-- Agents can be linked to a sender number behind the scenes -- If the recipient doesn’t support RCS, we can **automatically fall back to SMS** using the linked sender number.
-- Agents can also be linked to a callable number that customers can call from the agent. See the image below for an example.
+* Agents can be linked to a sender number behind the scenes -- If the recipient doesn’t support RCS, we can **automatically fall back to SMS** using the linked sender number.
+* Agents can also be linked to a callable number that customers can call from the agent. See the image below for an example.
 
 ## What Agents Look Like
 
 Agents are branded business profiles that appear in a user’s messaging app. There are quite a few details to an agent, so we've identified them below.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/0e7eadbf14b3ab20b6c99c82084fc8d229a924c1f3411315abfe7048664a9ab1-Screenshot_2025-06-05_at_1.27.43_pm.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/0e7eadbf14b3ab20b6c99c82084fc8d229a924c1f3411315abfe7048664a9ab1-Screenshot_2025-06-05_at_1.27.43_pm.png" />
 
 | #  | Field Name                | Description                                                                                                        |
 | -- | ------------------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -88,11 +74,11 @@ Agents are branded business profiles that appear in a user’s messaging app. Th
 
 You can think of agents like micro-apps — each tailored to a use case. Some examples:
 
-- Customer Support Agent  
+* Customer Support Agent\
   Branded support line with quick replies, links to help docs, and escalation options.
-- Marketing Agent  
+* Marketing Agent\
   Sends promos, product updates, carousels, or interactive campaigns (e.g. surveys or flash sales).
-- Transactional Agent  
+* Transactional Agent\
   Sends receipts, delivery updates, appointment confirmations, etc., all with smart buttons like “Track,” “Reschedule,” or “Get Help.”
-- Multi-brand Platform?  
+* Multi-brand Platform?\
   You can register separate agents per brand, business unit, or region — all from a single platform.

@@ -2,3 +2,4 @@
 - put_v1-touchpoint-id
 - delete_v1-touchpoint-id
 - get_v1-touchpoint
+- post_v1-touchpoint

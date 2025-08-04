@@ -5,3 +5,4 @@
 - post_add-to-list-json
 - post_edit-list-member-json
 - post_delete-from-list-json
+- post_optout-list-member-json

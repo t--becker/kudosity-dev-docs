@@ -7,3 +7,4 @@
 - post_delete-from-list-json
 - post_optout-list-member-json
 - post_add-contacts-bulk-progress-json
+- post_get-contact-json

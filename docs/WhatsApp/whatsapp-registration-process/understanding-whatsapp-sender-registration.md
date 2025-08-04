@@ -13,7 +13,7 @@ next:
 Registering a WhatsApp sender is the first step to start using WhatsApp for business communication on the Kudosity platform. This process involves setting up your WhatsApp Business Account (WABA) through Meta's systems.
 
 > 📘 Meta Registration
-> 
+>
 > The WhatsApp sender registration is managed by Meta. However, if you encounter any issues, contact our [Kudosity Support](https://kudosity.com/contact-us).
 
 ## Kudosity + WhatsApp Cloud API Integration
@@ -26,22 +26,7 @@ Kudosity offers a WhatsApp Cloud Business solution integrated with Meta's Cloud 
 2. Kudosity **processes the message**: verifies details, executes billing and routing, and forwards the message to the WhatsApp platform through Meta's **Cloud API**.
 3. WhatsApp delivers the message to the end user's device via the WhatsApp network.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/6f25a3b876d9a667026b7c3f5854b9a185be586bad2a5b48a4ea6ff47488d8f5-ChatGPT_Image_Jun_19_2025_04_06_41_PM.png",
-        "",
-        ""
-      ],
-      "align": "center",
-      "sizing": "400px"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="400px" src="https://files.readme.io/6f25a3b876d9a667026b7c3f5854b9a185be586bad2a5b48a4ea6ff47488d8f5-ChatGPT_Image_Jun_19_2025_04_06_41_PM.png" />
 
 <br />
 
@@ -55,28 +40,39 @@ To create and manage a WABA, businesses must have a [Meta business portfolio](ht
 
 ### Meta Business Portfolio & WhatsApp Business Account
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Meta Business Portfolio",
-    "h-1": "WhatsApp Business Account",
-    "0-0": "• Manage your business operations and customer communication within Meta's ecosystem  \n• Centralized control over assets like pages, ad accounts, and user permissions",
-    "0-1": "• Prerequisite for accessing the WhatsApp Business Platform  \n• Enables direct communication with customers using the WhatsApp platform  \n• Linked to Meta business portfolio"
-  },
-  "cols": 2,
-  "rows": 1,
-  "align": [
-    null,
-    null
-  ]
-}
-[/block]
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Meta Business Portfolio
+      </th>
 
+      <th>
+        WhatsApp Business Account
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        • Manage your business operations and customer communication within Meta's ecosystem
+        • Centralized control over assets like pages, ad accounts, and user permissions
+      </td>
+
+      <td>
+        • Prerequisite for accessing the WhatsApp Business Platform\
+        • Enables direct communication with customers using the WhatsApp platform\
+        • Linked to Meta business portfolio
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 Each WABA can contain multiple phone numbers and support different account types:
 
-- **Verified business account**: A business that has successfully completed the business verification process.
-- **Official Business Account (OBA)**: A verified account with a blue checkmark, signifying a notable brand.
+* **Verified business account**: A business that has successfully completed the business verification process.
+* **Official Business Account (OBA)**: A verified account with a blue checkmark, signifying a notable brand.
 
 ***
 
@@ -88,9 +84,9 @@ A WhatsApp sender refers to a **phone number** that serves as your identifier an
 
 You need a valid phone number to register a WhatsApp sender. This number serves as your business identifier and must meet the following criteria:
 
-- **Format**: It must be in [E.164 international format](https://www.kudosity.com/glossary/e164) and be reachable internationally.
-- **Verification**: The number must be active during the registration process, meaning it must be able to receive a [two-factor authentication (2FA)](https://www.kudosity.com/blog/what-is-2fa-everything-you-need-to-know) code through SMS or voice call.
-- **Restrictions**:
-  - [Short codes](https://www.kudosity.com/glossary/short-code) and toll-free numbers are not supported.
-  - Numbers under an [IVR (Interactive Voice Response)](https://www.kudosity.com/glossary/interactive-voice-response) system cannot be registered using the standard registration process. Contact your Kudosity account manager or [Support](https://www.kudosity.com/contact/) for assistance if your phone number is under IVR.
-  - If you wish to use a phone number already registered with any version of WhatsApp, you must first delete the associated account to enable its use for business purposes.
+* **Format**: It must be in [E.164 international format](https://www.kudosity.com/glossary/e164) and be reachable internationally.
+* **Verification**: The number must be active during the registration process, meaning it must be able to receive a [two-factor authentication (2FA)](https://www.kudosity.com/blog/what-is-2fa-everything-you-need-to-know) code through SMS or voice call.
+* **Restrictions**:
+  * [Short codes](https://www.kudosity.com/glossary/short-code) and toll-free numbers are not supported.
+  * Numbers under an [IVR (Interactive Voice Response)](https://www.kudosity.com/glossary/interactive-voice-response) system cannot be registered using the standard registration process. Contact your Kudosity account manager or [Support](https://www.kudosity.com/contact/) for assistance if your phone number is under IVR.
+  * If you wish to use a phone number already registered with any version of WhatsApp, you must first delete the associated account to enable its use for business purposes.

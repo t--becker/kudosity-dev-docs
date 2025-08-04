@@ -14,12 +14,12 @@ The best way to get immediate notification on the events like SMS delivery or in
 
 Callbacks can be set in several different places within your account.
 
-- In the SETTINGS section of your account  
+* In the SETTINGS section of your account\
   Callbacks set there are the default for the account.
-- In the send-sms API call  
+* In the send-sms API call\
   Callbacks for DLR and reply can be set as parameters when you make the send-sms call.
-- Forward to URL in Inbound Options for a dedicated virtual number (Reply Callback)
-- Forward to URL in Keyword Options (Reply Callback)Forward to URL in List Automation (List Action Callback)
+* Forward to URL in Inbound Options for a dedicated virtual number (Reply Callback)
+* Forward to URL in Keyword Options (Reply Callback)Forward to URL in List Automation (List Action Callback)
 
 ## Callback Priority
 
@@ -41,31 +41,74 @@ DLR's or Delivery Receipts, are notifications received from the carriers relatin
 
 Parameters we include in our delivery callback request:
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "PARAMETER",
-    "h-1": "DESCRIPTION",
-    "0-0": "`message_id`",
-    "0-1": "Your message ID",
-    "1-0": "`mobile`",
-    "1-1": "Recipient mobile number",
-    "2-0": "`datetime`",
-    "2-1": "Date/time of delivery. UTC",
-    "3-0": "`status`",
-    "3-1": "`delivered` -  Delivered to handset  \n`pending` - No delivery report received from carrier. Allow up to 72hrs or use validity in send-sms call to process.  \n`soft-bounce` - Message was undeliverable due to handset switched off, out of range or other temporary deliverability issue.  \n`hard-bounce` - Handset was disconnected",
-    "4-0": "`user_id`",
-    "4-1": "Your account ID"
-  },
-  "cols": 2,
-  "rows": 5,
-  "align": [
-    null,
-    null
-  ]
-}
-[/block]
+<Table>
+  <thead>
+    <tr>
+      <th>
+        PARAMETER
+      </th>
 
+      <th>
+        DESCRIPTION
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        `message_id`
+      </td>
+
+      <td>
+        Your message ID
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        `mobile`
+      </td>
+
+      <td>
+        Recipient mobile number
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        `datetime`
+      </td>
+
+      <td>
+        Date/time of delivery. UTC
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        `status`
+      </td>
+
+      <td>
+        `delivered` -  Delivered to handset\
+        `pending` - No delivery report received from carrier. Allow up to 72hrs or use validity in send-sms call to process.\
+        `soft-bounce` - Message was undeliverable due to handset switched off, out of range or other temporary deliverability issue.\
+        `hard-bounce` - Handset was disconnected
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        `user_id`
+      </td>
+
+      <td>
+        Your account ID
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 Example
 
@@ -77,21 +120,21 @@ https://www.myserver.com/processdlr.php?myparameter=myvalue&message_id=331694668
 
 Incoming SMS are broadly similar, with 2 subtly different forms:
 
-- SMS Replies: are messages received 'in response' to an SMS message sent by you. Responses can come in on both the System Shared Number Pool or any Dedicated Virtual Number, and will be posted to the Callback URL above if there was no URL set as a parameter in the send-sms call.
-- Inbound SMS: are messages that are received originating from a users mobile phone and are not in response to a message sent. Inbound SMS can only be received on a Dedicated Virtual Number and will only be posted to the Default URL supplied above.
+* SMS Replies: are messages received 'in response' to an SMS message sent by you. Responses can come in on both the System Shared Number Pool or any Dedicated Virtual Number, and will be posted to the Callback URL above if there was no URL set as a parameter in the send-sms call.
+* Inbound SMS: are messages that are received originating from a users mobile phone and are not in response to a message sent. Inbound SMS can only be received on a Dedicated Virtual Number and will only be posted to the Default URL supplied above.
 
 Parameters we include in our reply callback request:
 
-| PARAMETER      | DESCRIPTION                              |
-| -------------- | ---------------------------------------- |
-| user_id        | Your account ID                          |
-| message_id     | Your message ID                          |
-| mobile         | Sender’s mobile                          |
-| longcode       | The virtual number message was sent to   |
-| datetime_entry | Date/time that message was received. UTC |
-| response       | Message text                             |
-| response_id    | ID assigned to incoming message          |
-| is_optout      | Opt-out flag. ‘yes’ or ‘no’              |
+| PARAMETER       | DESCRIPTION                              |
+| --------------- | ---------------------------------------- |
+| user\_id        | Your account ID                          |
+| message\_id     | Your message ID                          |
+| mobile          | Sender’s mobile                          |
+| longcode        | The virtual number message was sent to   |
+| datetime\_entry | Date/time that message was received. UTC |
+| response        | Message text                             |
+| response\_id    | ID assigned to incoming message          |
+| is\_optout      | Opt-out flag. ‘yes’ or ‘no’              |
 
 Example
 
@@ -105,18 +148,18 @@ The default link hits callback URL is used to notify when a tapth.is/xxxxx URL d
 
 Parameters we include in our link hits callback request:
 
-| PARAMETER  | DESCRIPTION                           |
-| ---------- | ------------------------------------- |
-| list_id    | Your list ID                          |
-| message_id | Your message ID                       |
-| mobile     | Sender’s mobile                       |
-| longcode   | The number message was delivered to   |
-| datetime   | Date/time that the click was recorded |
-| message    | Message text                          |
-| user_id    | Account ID                            |
-| link_hits  | Link hit count                        |
-| firstname  | Firstname of contact that clicked     |
-| lastname   | Lastname of contact that clicked      |
+| PARAMETER   | DESCRIPTION                           |
+| ----------- | ------------------------------------- |
+| list\_id    | Your list ID                          |
+| message\_id | Your message ID                       |
+| mobile      | Sender’s mobile                       |
+| longcode    | The number message was delivered to   |
+| datetime    | Date/time that the click was recorded |
+| message     | Message text                          |
+| user\_id    | Account ID                            |
+| link\_hits  | Link hit count                        |
+| firstname   | Firstname of contact that clicked     |
+| lastname    | Lastname of contact that clicked      |
 
 Example
 
@@ -135,8 +178,8 @@ Parameters we include in our list action callback request:
 | PARAMETER         | DESCRIPTION                                      |
 | ----------------- | ------------------------------------------------ |
 | type              | Add or Delete                                    |
-| datetime_entry    | Date/time of action. UTC.                        |
-| list_id           | ID of list.                                      |
+| datetime\_entry   | Date/time of action. UTC.                        |
+| list\_id          | ID of list.                                      |
 | mobile            | Mobile of number actioned                        |
 | firstname         | Firstname of contact                             |
 | lastname          | Lastname of contact                              |

@@ -1,3 +1,4 @@
 - post_get-sms-json
 - post_get-sms-delivery-status-json
 - post_get-sms-sent-count-json
+- post_get-user-sms-sent-json

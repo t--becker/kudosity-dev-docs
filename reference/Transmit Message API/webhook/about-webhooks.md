@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-Kudosity’s Webhooks API enables you to subscribe to key messaging events in real time. To receive events, you must configure a publicly accessible HTTPS endpoint that can accept POST requests. Each event includes an event\_type field to indicate the kind of eventand also include a status object with more detailed delivery information.
+Kudosity’s Webhooks API enables you to subscribe to key messaging events in real time. To receive events, you must configure a publicly accessible HTTPS endpoint that can accept POST requests. Each event includes an event\_type field to indicate the kind of event and also include a status object with more detailed delivery information.
 
 ## Supported `event_type` Values
 

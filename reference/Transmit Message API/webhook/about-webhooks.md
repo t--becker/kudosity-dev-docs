@@ -126,7 +126,7 @@ Filter by sender, status, message reference, and campaign:
 * **`sender`**: Array of sender addresses to filter by
 * **`message_ref`**: Array of message references to filter by
 * **`status`**: Array of message statuses to filter by (applies to status events only)
-* **`campaign_id`**: Array of campaign IDs to filter by 
+* **`campaign_id`**: Array of campaign IDs to filter by
 
 ## Link Hit
 
